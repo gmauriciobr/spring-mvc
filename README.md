@@ -30,7 +30,7 @@
    Esperando o seguinte resultado:
    ![docker-compose-up](images/img_01.png)
 
-4. Acessar pelo navegaador a ULR: http:\\localhost:8080/home
+4. Acessar pelo navegador a ULR: http:\\localhost:8080/home
    - ![Img01](images/img_02.png)
    - ![Img02](images/img_03.png)
 
