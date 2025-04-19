@@ -1,7 +1,7 @@
 # Especificações
 
 - Docker
-- Java 8
+- ~~Java 8~~ Java 21
 - Spring Boot
 - Spring Data
 - Spring MVC
