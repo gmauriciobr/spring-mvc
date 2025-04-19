@@ -1,8 +1,10 @@
 package br.com.gmauricio.controller;
 
 
-import javax.validation.Valid;
-
+import br.com.gmauricio.dto.PedidoDTO;
+import br.com.gmauricio.model.Pedido;
+import br.com.gmauricio.service.PedidoService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -10,10 +12,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
-
-import br.com.gmauricio.dto.PedidoDTO;
-import br.com.gmauricio.model.Pedido;
-import br.com.gmauricio.service.PedidoService;
 
 @Controller
 @RequestMapping("pedido")

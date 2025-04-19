@@ -1,9 +1,9 @@
 package br.com.gmauricio.service;
 
-import java.util.List;
-
 import br.com.gmauricio.model.Pedido;
 import br.com.gmauricio.model.Pedido.StatusPedido;
+
+import java.util.List;
 
 public interface PedidoService extends PersistenceService {
 

@@ -1,18 +1,16 @@
-version: '3'
-
-services:    
+services:
   mysql:
-    build: 
+    build:
       dockerfile: ./docker/mysql.dockerfile
       context: .
-    image: gmauricio/mysql  
+    image: gmauricio/mysql
     container_name: mysql
-    ports: 
+    ports:
       - "3306:3306"
-    networks: 
+    networks:
       - gmauricio-network
-    command: 
-      --lower_case_table_names=0     
+    command:
+      --lower_case_table_names=0
     environment:
         MYSQL_ROOT_PASSWORD: 123456
         MYSQL_DATABASE: lojadb
@@ -21,7 +19,7 @@ services:
 
   loja:
     build:
-      dockerfile: ./docker/loja.dockerfile
+      dockerfile: java/loja/Dockerfile
       context: .
     image: gmauricio/loja
     container_name: loja
@@ -30,7 +28,7 @@ services:
     networks: 
       - gmauricio-network
     depends_on:
-      - mysql   
+      - mysql
     restart: on-failure:10    
 
 networks: 

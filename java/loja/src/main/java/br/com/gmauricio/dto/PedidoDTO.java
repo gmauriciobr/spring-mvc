@@ -1,13 +1,11 @@
 package br.com.gmauricio.dto;
 
-
-import javax.validation.constraints.NotBlank;
-
 import br.com.gmauricio.model.Pedido;
 import br.com.gmauricio.model.Pedido.StatusPedido;
+import jakarta.validation.constraints.NotBlank;
 
 public class PedidoDTO {
-	
+
 	private Long id;
 	@NotBlank
 	private String nome;
@@ -16,7 +14,7 @@ public class PedidoDTO {
 	@NotBlank
 	private String urlImagem;
 	private String descricao;
-	
+
 	public Long getId() {
 		return id;
 	}
@@ -47,7 +45,7 @@ public class PedidoDTO {
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
-	
+
 	public static Pedido parseToPedido(PedidoDTO pedidoDTO) {
 		Pedido pedido = new Pedido();
 		pedido.setNome(pedidoDTO.getNome());
@@ -57,6 +55,6 @@ public class PedidoDTO {
 		pedido.setStatusPedido(StatusPedido.W);
 		return pedido;
 	}
-	
+
 
 }

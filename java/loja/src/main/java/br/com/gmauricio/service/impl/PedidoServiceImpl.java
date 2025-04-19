@@ -1,16 +1,15 @@
 package br.com.gmauricio.service.impl;
 
-import java.util.List;
-
+import br.com.gmauricio.model.Pedido;
+import br.com.gmauricio.model.Pedido.StatusPedido;
+import br.com.gmauricio.repository.PedidoRepository;
+import br.com.gmauricio.service.PedidoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import br.com.gmauricio.model.Pedido;
-import br.com.gmauricio.model.Pedido.StatusPedido;
-import br.com.gmauricio.repository.PedidoRepository;
-import br.com.gmauricio.service.PedidoService;
+import java.util.List;
 
 @Service
 @Transactional(propagation = Propagation.REQUIRED, rollbackFor = Throwable.class)
